@@ -1,4 +1,4 @@
-export const APICall = async (endpoint: string, method = "GET", body?: object | [] | string): Promise<Response> => {
+export const APICall = async (endpoint: string, method = "GET", body?: any): Promise<Response> => {
     if(method === "GET") {
         return await fetch(`http://localhost:3001/${endpoint}`);
     }

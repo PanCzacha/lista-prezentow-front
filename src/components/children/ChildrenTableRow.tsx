@@ -13,7 +13,11 @@ export const ChildrenTableRow = (props: Props) => {
             {props.child.name}
         </td>
         <td>
-            <ChildGiftSelect giftList={props.giftsList} selectedId={props.child.giftId === undefined ? "" : props.child.giftId} childId={props.child.id as string}/>
+            <ChildGiftSelect
+                giftList={props.giftsList}
+                selectedId={props.child.giftId}
+                childId={props.child.id as string}
+                childName={props.child.name}/>
         </td>
 
     </tr>)
